@@ -75,7 +75,7 @@ public class LocElements implements java.io.Serializable {
         this.isActive = isActive;
     }
 
-    @Column(name = "iso_alpha2")
+    @Column(name = "iso_alpha_2")
     public String getIsoAlpha2() {
         return this.isoAlpha2;
     }
