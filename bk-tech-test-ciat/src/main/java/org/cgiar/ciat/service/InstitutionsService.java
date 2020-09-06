@@ -13,4 +13,5 @@ import java.util.*;
 *
 */
 public interface InstitutionsService extends GenericService<Institutions, Long> {
+	
 }

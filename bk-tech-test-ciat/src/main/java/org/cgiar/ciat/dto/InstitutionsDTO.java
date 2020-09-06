@@ -30,6 +30,15 @@ public class InstitutionsDTO implements Serializable {
     private String websiteLink;
     private Long id_InstitutionTypes;
 
+    /**
+     * Add, mapping the name of the Institution Type
+     * @author Daniel Pareja Londoño
+     * @version sep 06, 2020
+     * @since 1.8
+     *
+     */
+    private String name_InstitutionTypes;
+    
     public String getAcronym() {
         return acronym;
     }
@@ -86,7 +95,31 @@ public class InstitutionsDTO implements Serializable {
         this.id_InstitutionTypes = id_InstitutionTypes;
     }
 
-    @Override
+    /**
+	 *
+	 * @author Daniel Pareja Londoño
+	 * @version sep 06, 2020
+	 * @since 1.8
+	 * @return El/La name_InstitutionTypes
+	 *
+	 */
+	public String getName_InstitutionTypes() {
+		return name_InstitutionTypes;
+	}
+
+	/**
+	 *
+	 * @param name_InstitutionTypes El/La name_InstitutionTypes a setear
+	 * @author Daniel Pareja Londoño
+	 * @version sep 06, 2020
+	 * @since 1.8
+	 *
+	 */
+	public void setName_InstitutionTypes(String name_InstitutionTypes) {
+		this.name_InstitutionTypes = name_InstitutionTypes;
+	}
+
+	@Override
     public String toString() {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);

@@ -21,6 +21,7 @@ import java.util.List;
 @Mapper
 public interface InstitutionsMapper {
     @Mapping(source = "institutionTypes.id", target = "id_InstitutionTypes")
+    @Mapping(source = "institutionTypes.name", target = "name_InstitutionTypes")
     public InstitutionsDTO institutionsToInstitutionsDTO(
         Institutions institutions) throws Exception;
 
