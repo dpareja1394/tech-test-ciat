@@ -1,0 +1,10 @@
+<div *ngIf="show">
+    <p>{{ institution === undefined ? '' : institution.acronym }}</p>
+    <p>{{ institution === undefined ? '' : institution.name }}</p>
+    <p>{{ institution === undefined ? '' : institution.name_InstitutionTypes }}</p>
+    <p>{{ institution === undefined ? '' : institution.websiteLink }}</p>
+
+
+    <input type="text" name="txtAcronym" [(ngModel)]="institution.acronym" class="form-control" id="txtAcronym"
+        placeholder="Acronym">
+</div>
