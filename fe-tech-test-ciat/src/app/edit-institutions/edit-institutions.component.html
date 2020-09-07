@@ -1,0 +1,17 @@
+<div class="card-container">
+
+    <div class="card card-small" tabindex="0">
+      <a [routerLink]="['/institutions']"><span>Back</span></a>
+      
+    </div>
+  </div>
+
+<input type="text" [formControl]="acronym" class="form-control" id="txtAcronym" placeholder="Acronym">
+<input type="text" [formControl]="name" class="form-control" id="txtName" placeholder="Name">
+<input type="text" [formControl]="websiteLink" class="form-control" id="txtwebsiteLink" placeholder="website">
+<select class="form-control" [formControl]="institutionType">
+  <option *ngFor="let institutionType of institutionTypes" [ngValue]="institutionType.id">
+    {{ institutionType.name }}
+  </option>
+</select>
+<button (click)="updateInstitution()">Update</button>
