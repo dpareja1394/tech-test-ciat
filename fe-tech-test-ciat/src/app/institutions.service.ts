@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Institutions } from './dto/institutions';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,11 @@ export class InstitutionsService {
     return this.http.get(this.url+'findById/'+institutionId);
   }
 
+  public updateInstitution(institution:Institutions){
+    console.log(institution);
+    return this.http.put(this.url+'update',institution);
+  }
+
   //Encapsulated InstitutionSelected
   public getInstitutionSelected(){
     return this.institutionSelected;
@@ -26,5 +32,7 @@ export class InstitutionsService {
   public setInstitutionSelected(institutionSelected:number){
     this.institutionSelected = institutionSelected;
   }
+
+
 
 }

@@ -1,4 +1,4 @@
-export interface Institutions {
+export class Institutions {
     acronym:string;
     added:Date;
     id:number;
@@ -7,4 +7,4 @@ export interface Institutions {
     websiteLink:string;
     id_InstitutionTypes:number;
     name_InstitutionTypes:string;
-  }
+}

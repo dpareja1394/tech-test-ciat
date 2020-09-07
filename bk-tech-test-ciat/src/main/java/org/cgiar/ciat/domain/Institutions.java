@@ -60,7 +60,7 @@ public class Institutions implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "institution_type_id", insertable=false, updatable=false)
+    @JoinColumn(name = "institution_type_id")
     public InstitutionTypes getInstitutionTypes() {
         return this.institutionTypes;
     }

@@ -8,7 +8,9 @@ import { InstitutionsComponent } from './institutions/institutions.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InstitutionsService } from './institutions.service';
 import { EditInstitutionsComponent } from './edit-institutions/edit-institutions.component';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { InstitutionTypesService } from './institution-types.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,10 +21,15 @@ import { EditInstitutionsComponent } from './edit-institutions/edit-institutions
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSnackBarModule
+ 
   ],
   providers: [
-    InstitutionsService
+    InstitutionsService,
+    InstitutionTypesService
   ],
   bootstrap: [AppComponent]
 })
